@@ -1,6 +1,6 @@
 # emailme.js
 
-## Micro library helps to send emails easyly and quickly. 
+## The micro-library helps to send emails easily and quickly.
 
 ### How to run
 
