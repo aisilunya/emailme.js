@@ -20,20 +20,16 @@ function sendForm(URL, token) {
   postData(URL + token, [template_params]);
 }
 
-function send(URL, token, formFieldsArray) {
-  let template_params = {};
-
-  for (let inputField in formFieldsArray) {
-    template_params[formFieldsArray[inputField].name] =
-      formFieldsArray[inputField].value;
-  }
+function send(URL, token, template_params = {}) {
   postData(URL + token, [template_params]);
 }
 
-function init() {
-  sendForm();
+const URL = 'http://127.0.0.1/api/send/mail/';
+
+function init(token) {
+  sendForm(URL, token);
 }
 
-function advanced() {
-  send();
+function advanced(token, formFieldsArray) {
+  send(URL, token, formFieldsArray);
 }
