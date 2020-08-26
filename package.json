@@ -1,6 +1,6 @@
 {
   "name": "emailme.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "library for sending emails",
   "main": "emailme.js",
   "directories": {
