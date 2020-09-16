@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Example template for emailme.js</title>
+  </head>
+  <body>
+    <form id="choose_form">
+      <input
+        type="date"
+        name="date"
+        placeholder="Выберите день для замеров"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Ваш email"
+      />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Ваш tel"
+      />
+      <input
+        type="text"
+        name="fullname"
+        placeholder="Ваше имя"
+      />
+      <select name="select">
+        <option value="option1" selected>option1</option>
+        <option value="option2">option2</option>
+        <option value="option3">option3</option>
+        <option value="option4">option4</option>
+      </select>
+      <button name="submit" onclick="sendEmail()">Отправить</button>
+    </form>
+    <script type="module">
+      import * as emailmejs from '../src/emailme.js';
+      function sendEmail() {
+        event.preventDefault();
+        emailmejs.sendForm(
+          "http://127.0.0.1/api/send/mail/",
+          "64d8aafd-d885-4682-bff2-7ddc1bfe5e74"
+        );
+      }
+    </script>
+  </body>
+</html>
